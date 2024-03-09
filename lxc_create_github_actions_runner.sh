@@ -15,6 +15,8 @@ PCT_CORES="4"
 PCT_MEMORY="4096"
 PCT_SWAP="4096"
 PCT_STORAGE="local-lvm"
+DEFAULT_IP_ADDR="192.168.0.123/24"
+DEFAULT_GATEWAY="192.168.0.1"
 
 # Ask for GitHub token and owner/repo if they're not set
 if [ -z "$GITHUB_TOKEN" ]; then
@@ -33,8 +35,10 @@ log() {
 }
 
 # Prompt for network details
-read -r -e -p "Container Address IP (CIDR format): " -i "192.168.0.123/24" IP_ADDR
-read -r -e -p "Container Gateway IP: " -i "192.168.0.1" GATEWAY
+read -r -e -p "Container Address IP (CIDR format) [$DEFAULT_IP_ADDR]: " input_ip_addr
+IP_ADDR=${input_ip_addr:-$DEFAULT_IP_ADDR}
+read -r -e -p "Container Gateway IP [$DEFAULT_GATEWAY]: " input_gateway
+GATEWAY=${input_gateway:-$DEFAULT_GATEWAY}
 
 # Get filename from the URLs
 TEMPL_FILE=$(basename $TEMPL_URL)
