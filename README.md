@@ -50,7 +50,7 @@ NOTE: Since the new container has docker support, it cannot be run unpriviledged
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/oNaiPs/proxmox-scripts/main/lxc_create_github_actions_runner.sh
+curl -O https://raw.githubusercontent.com/jamiegs/proxmox-scripts/main/lxc_create_github_actions_runner.sh
 
 # Inspect script, customize variables
 

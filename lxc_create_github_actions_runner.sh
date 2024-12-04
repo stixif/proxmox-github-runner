@@ -7,8 +7,8 @@
 set -e
 
 # Variables
-GITHUB_RUNNER_URL="https://github.com/actions/runner/releases/download/v2.311.0/actions-runner-linux-x64-2.311.0.tar.gz"
-TEMPL_URL="http://download.proxmox.com/images/system/ubuntu-23.04-standard_23.04-1_amd64.tar.zst"
+GITHUB_RUNNER_URL="https://github.com/actions/runner/releases/download/v2.321.0/actions-runner-linux-x64-2.321.0.tar.gz"
+TEMPL_URL="http://download.proxmox.com/images/system/ubuntu-24.10-standard_24.10-1_amd64.tar.zst"
 PCTSIZE="20G"
 PCT_ARCH="amd64"
 PCT_CORES="4"
