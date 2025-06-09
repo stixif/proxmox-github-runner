@@ -39,7 +39,7 @@ root@proxmox-1:~# ./cssh cat /etc/debian_version
 
 Creates and sets up a self-hosted GitHub Actions runner in an LXC container on Proxmox:
 
-1. Create a new LXC container based on ubuntu 23.04
+1. Create a new LXC container based on ubuntu 23.10
 1. Installs apt-get dependencies (git, curl)
 1. Installs docker
 1. Installs Github actions (needs GITHUB_TOKEN and OWNERREPO) and sets up service
@@ -50,7 +50,7 @@ NOTE: Since the new container has docker support, it cannot be run unpriviledged
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/jamiegs/proxmox-scripts/main/lxc_create_github_actions_runner.sh
+curl -O https://raw.githubusercontent.com/stixif/proxmox-github-runner/main/lxc_create_github_actions_runner.sh
 
 # Inspect script, customize variables
 
